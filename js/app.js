@@ -50,7 +50,6 @@ function init() {
        data: JSON.stringify({url: feedUrl}),
        contentType:"application/json",
        success: function (result, status){
-
                  var container = $('.feed'),
                      title = $('.header-title'),
                      entries = result.feed.entries,
@@ -118,7 +117,6 @@ $(function() {
      */
     feedList.on('click', 'a', function() {
         var item = $(this);
-
         $('body').addClass('menu-hidden');
         loadFeed(item.data('id'));
         return false;
